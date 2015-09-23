@@ -9,15 +9,12 @@ package s3.tp3cafe;
  *
  * @author USER
  */
-public class RunClass {
+public class TestSimulation {
     
     public static void main(String[]args){
-        
-        Cafe leBonCafe = new Cafe("McCafé",60);
+        Cafe leBonCafe = new Cafe("McCafé",16);
         leBonCafe.ouverture(3);
-        
+        leBonCafe.gestion();
     }
     
 }
-
-// 
