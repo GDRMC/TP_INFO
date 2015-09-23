@@ -38,8 +38,14 @@ public class Cafe
 	
 	public void ouverture(int nbreGroupe)
 	{
-	
-	
+            out("Ouverture du café.");
+            this.FP = new FilePrio();
+            for(int i=0;i<nbreGroupe;i++){
+                int nbGr = aleatoire(1,6);
+                this.FP.add(new Groupe(i,aleatoire(1,6),0,aleatoire(1,4)));
+            }
+            FP.Afficher();
+            
 	
 	
 	}
@@ -67,6 +73,8 @@ public class Cafe
 		return  min +(int)(Math.random()*(max - min + 1));
 	}
 
+        //affiche un message
+        public void out(String str){ System.out.println(str); }
 
 }
 

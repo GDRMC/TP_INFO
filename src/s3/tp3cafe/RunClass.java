@@ -13,6 +13,11 @@ public class RunClass {
     
     public static void main(String[]args){
         
+        Cafe leBonCafe = new Cafe("McCafé",60);
+        leBonCafe.ouverture(3);
+        
     }
     
 }
+
+// 

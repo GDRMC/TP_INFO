@@ -14,15 +14,15 @@ private int statut;
 
 	Groupe(int num, int nb, int stat, int prio) 
 	{
-		this.priorite= prio;
-		this.numero = num;
-		this.nbPers = nb;
-		this.statut = stat;
+            this.numero = num;
+            this.nbPers = nb;
+            this.statut = stat;
+            this.priorite= prio;
 	}
 
 	public String toString()
 	{
-		return "Num�ro : "+this.numero+ " Nombre de personnes : "+this.nbPers+" Statut : "+this.statut+ "  Priorit� : "+this.priorite;
+		return "Numéro : "+this.numero+ " Nombre de personnes : "+this.nbPers+" Statut : "+this.statut+ "  Priorité : "+this.priorite;
 	}
 	
 	public int getPrio() {return priorite; }
