@@ -12,15 +12,18 @@ package s3.tp4herit;
 public class TestDuMeuporg {
     
     public static void main(String[]args){
-        Truqueur frodon = new Truqueur(50,2,3);
         Chevalier link = new Chevalier(70,2,2);
         Excalibur machete = new Excalibur(60,3,3);
         Enchanteur gandalf = new Enchanteur(55,2,4);
+        Truqueur frodon = new Truqueur(50,2,3);
         
-        disp(frodon);
         disp(link);
         disp(machete);
         disp(gandalf);
+        disp(frodon);
+        
+        Combats howlingAbyss = new Combats(link,frodon,machete,gandalf);
+        
     }
     
     public static void disp(Personnage e){
