@@ -63,7 +63,6 @@ public class Cafe
                             g.setStatut(1);
                             FP.add(g);
                         }else{
-                            //affiche la sortie du groupe
                             System.out.println(space()+"ON S'EN VA, ACHETEZ PLUS DE CHAISES !\n");
                         }
                         break;
@@ -81,7 +80,6 @@ public class Cafe
                         System.out.println(space()+"DEPART du groupe n°"+g.getNumero()+", libérant "+g.getNbPers()+" place(s).");
                         this.nbPlaces=this.getNombrePlaces()+g.getNbPers();
                         System.out.println("Nombre de places disponibles: "+this.getNombrePlaces()+space());
-                        
                         break;
                 }
                 
@@ -101,6 +99,7 @@ public class Cafe
 		return  min +(int)(Math.random()*(max - min + 1));
 	}
 
+        //affiche un saut de ligne
         private String space() {
             return "\n";
         }

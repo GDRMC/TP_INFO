@@ -12,7 +12,10 @@ package s3.tp4herit;
 public class TestDuMeuporg {
     
     public static void main(String[]args){
-        
+        Truqueur frodon = new Truqueur(50,2,3);
+        Chevalier link = new Chevalier(70,2,2);
+        Excalibur machete = new Excalibur(60,3,3);
+        Enchanteur gandalf = new Enchanteur(55,2,4);
     }
     
 }
