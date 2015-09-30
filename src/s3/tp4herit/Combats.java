@@ -10,7 +10,13 @@ package s3.tp4herit;
  * @author USER
  */
 public class Combats {
-    File arene = new File();
+    Personnage a;
+    Personnage b;
+    Personnage c;
+    Personnage d;
+    
+    File equipe1;
+    File equipe2;
     
     /**
      * CONSTRUCTEUR: Crée une arène de 4 combattants dispatchés dans 2 équipes. a et b l'une, et c et d dans l'autre. ATTENTION, insertion en croisé pour combat tour par tour !
@@ -20,9 +26,48 @@ public class Combats {
      * @param d Combattant 2 equipe B
      */
     Combats(Personnage a, Personnage b, Personnage c, Personnage d){
-        this.arene.add(a); //A1
-        this.arene.add(c); //B1
-        this.arene.add(b); //A2
-        this.arene.add(d); //B2
+        this.a=a; //A1
+        this.b=b; //A2
+        this.c=c; //B1
+        this.d=d; //B2
+    }
+    
+    public void ouvrirArene(){
+        this.equipe1 = new File();
+        equipe1.add(a);
+        equipe2.add(c);
+        equipe1.add(b);
+        equipe2.add(d);
+        
+        System.out.println("\n\nCréation de l'arène:\n---Composition des équipes:---\n");
+        System.out.println("-Equipe A:-\n");
+        System.out.println(a+"\n");
+        System.out.println(b+"\n");
+        System.out.println("-Equipe B:-\n");
+        System.out.println(c+"\n");
+        System.out.println(d);
+        System.out.println("------------------------------");
+    }
+    
+    public char combat(){
+        File arene = new File();
+        boolean aEnVie = true;
+        boolean bEnVIe = true;
+        while((a.getVie()>0&&b.getVie()>0)&&(c.getVie()>0&&d.getVie()>0)){
+            //importe le premier combattant de la file
+            Personnage cbt1 = equipe1.get();
+            Personnage cbt2 = equipe2.get();
+            int degats1 = cbt1.attaque();
+            int degats2 = cbt2.attaque();
+            if(degats1 > degats2){
+                System.out.println("Combattant équipe A type "+cbt1.getType()+" attaque combattant équipe B type "+cbt2.getType());
+                
+            } else if(degats2 > degats1){
+                System.out.println("Combattant équipe B type "+cbt2.getType()+" attaque combattant équipe B type "+cbt1.getType());
+            } else {
+                System.out.println("Les dégats sont annulés... D:");
+            }
+        }
+        return 'A';
     }
 }

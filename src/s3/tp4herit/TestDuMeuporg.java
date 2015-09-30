@@ -23,7 +23,7 @@ public class TestDuMeuporg {
         disp(frodon);
         
         Combats howlingAbyss = new Combats(link,frodon,machete,gandalf);
-        
+        howlingAbyss.ouvrirArene();
     }
     
     public static void disp(Personnage e){
