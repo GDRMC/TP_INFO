@@ -107,7 +107,7 @@ public class Combats {
     }
     
     public void resultTab(){
-        System.out.println("\n\nRésultats du combat:\n");
+        System.out.println("\n\n-----Résultats du combat:-----\n");
         System.out.println("-Equipe A:-\n");
         System.out.println(a+"\n");
         System.out.println(b+"\n");
