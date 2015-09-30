@@ -16,6 +16,14 @@ public class TestDuMeuporg {
         Chevalier link = new Chevalier(70,2,2);
         Excalibur machete = new Excalibur(60,3,3);
         Enchanteur gandalf = new Enchanteur(55,2,4);
+        
+        disp(frodon);
+        disp(link);
+        disp(machete);
+        disp(gandalf);
     }
     
+    public static void disp(Personnage e){
+        System.out.println(e.toString());
+    }
 }

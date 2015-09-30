@@ -78,7 +78,7 @@ class Enchanteur extends Magicien
     }
 
     public String toString() {
-        return "Personnage: Enchanteur ("+this.typePers+") - Vie: "+this.vie+" - Magie: "+this.magie+" - Aura: "+this.aura;
+        return "Personnage: Enchanteur ("+this.typePers+")\n   Vie: "+this.vie+"\n   Magie: "+this.magie+"\n   Aura: "+this.aura;
     }
     
     
@@ -107,7 +107,7 @@ class Truqueur extends Magicien
     }
 
     public String toString() {
-        return "Personnage: Truqueur ("+this.typePers+") - Vie: "+this.vie+" - Magie: "+this.magie+" - Malice: "+this.malice;
+        return "Personnage: Truqueur ("+this.typePers+")\n   Vie: "+this.vie+"\n   Magie: "+this.magie+"\n   Malice: "+this.malice;
     }
 }
 
@@ -133,7 +133,7 @@ class Chevalier extends Guerrier
     }
 
     public String toString() {
-        return "Personnage: Chevalier ("+this.typePers+") - Vie: "+this.vie+" - Force: "+this.force+" - Courage: "+this.courage;
+        return "Personnage: Chevalier ("+this.typePers+")\n   Vie: "+this.vie+"\n   Force: "+this.force+"\n   Courage: "+this.courage;
     }
 }
 
@@ -159,7 +159,7 @@ class Excalibur extends Guerrier
     }
 
     public String toString() {
-        return "Personnage: Truqueur ("+this.typePers+") - Vie: "+this.vie+" - Force: "+this.force+" - Agressivité: "+this.agressivite;
+        return "Personnage: Truqueur ("+this.typePers+")\n   Vie: "+this.vie+"\n   Force: "+this.force+"\n   Agressivité: "+this.agressivite;
     }
     
 }
