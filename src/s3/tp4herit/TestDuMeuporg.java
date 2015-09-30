@@ -24,6 +24,15 @@ public class TestDuMeuporg {
         
         Combats howlingAbyss = new Combats(link,frodon,machete,gandalf);
         howlingAbyss.ouvrirArene();
+        char result = howlingAbyss.combat();
+        if(result=='A'){
+            System.out.println("\nL'équipe A est déclarée gagnante !");
+        } else if(result=='B'){
+            System.out.println("\nL'équipe B est déclarée gagnante !");
+        } else {
+            System.out.println("\nProblem ? ( ͡° ͜ʖ ͡°)");
+        }
+        
     }
     
     public static void disp(Personnage e){

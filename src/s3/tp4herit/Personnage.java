@@ -159,7 +159,7 @@ class Excalibur extends Guerrier
     }
 
     public String toString() {
-        return "Personnage: Truqueur ("+this.typePers+")\n   Vie: "+this.vie+"\n   Force: "+this.force+"\n   Agressivité: "+this.agressivite;
+        return "Personnage: Excalibur ("+this.typePers+")\n   Vie: "+this.vie+"\n   Force: "+this.force+"\n   Agressivité: "+this.agressivite;
     }
     
 }
