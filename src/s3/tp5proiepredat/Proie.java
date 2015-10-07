@@ -3,7 +3,7 @@ package s3.tp5proiepredat;
 public class Proie {
 // variable de classe partag�e par tous les objets
 
-    private static int NourritureProies = 10000;
+    private static int NourritureProies = 3000;
 // variables d'instances
     private int x, y, pasX, pasY;
 
@@ -20,7 +20,7 @@ public class Proie {
         this.y = yy;
 
         this.dureeVie = DUREEVIE;
-        this.jaugeFaim = Aleatoire(3, 8);
+        this.jaugeFaim = Aleatoire(1, 4);
         this.pasX = Aleatoire(-2, 2);
         this.pasY = Aleatoire(-2, 2);
 

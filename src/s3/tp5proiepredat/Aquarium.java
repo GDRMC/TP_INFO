@@ -39,6 +39,7 @@ public class Aquarium {
 
             temps++;
             mortalite();
+            reproProies();
             // affichage dans la vue
             maFenetre.mise_a_jour(this.lesProies, this.lesPredateurs, temps); // mise en jour des variables mod le
             maFenetre.repaint(); // on redessine la vue
@@ -77,7 +78,24 @@ public class Aquarium {
 
     private void reproProies() {
         ArrayList<Proie> bebe = new ArrayList();
-
+        
+        for(int i=0;i<this.lesProies.size();i++){
+            for(int j=0;j<this.lesProies.size();j++){
+                if(!(i==j)){
+                    if(this.lesProies.get(i).getX()==this.lesProies.get(j).getX()&&this.lesProies.get(i).getY()==this.lesProies.get(j).getY()){
+                        int posX = this.lesProies.get(i).getX();
+                        int posY = this.lesProies.get(i).getY();
+                        if(this.lesProies.get(i).getVie()<=240&&this.lesProies.get(j).getVie()<=240){
+                            bebe.add(new Proie(posX,posY));
+                        }
+                    }
+                }
+            }
+        }
+        
+        for(int i=0;i<bebe.size();i++){
+            this.lesProies.add(bebe.get(i));
+        }
     }
 
     private int Aleatoire(int min, int max) {
