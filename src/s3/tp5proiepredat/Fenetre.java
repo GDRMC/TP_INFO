@@ -97,6 +97,11 @@ public class Fenetre extends JFrame implements ActionListener {
         for (int j = 0; j < this.lesProies.size(); j++) {
             g.fillOval(50 + (this.lesProies.get(j)).getX() * 4, 50 + (this.lesProies.get(j)).getY() * 4, 4, 4);
         }
+        
+        g.setColor(Color.red);
+        for (int j = 0; j < this.lesPredateurs.size(); j++) {
+            g.fillOval(50 + (this.lesPredateurs.get(j)).getX() * 4, 50 + (this.lesPredateurs.get(j)).getY() * 4, 4, 4);
+        }
 
     }
 

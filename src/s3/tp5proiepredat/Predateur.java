@@ -34,6 +34,14 @@ public class Predateur {
     public int getVie() {
         return this.dureeVie;
     }
+    
+    public int getJaugeFaim(){
+        return this.gaugeFaim;
+    }
+    
+    public void mangerPouasson(){
+        this.gaugeFaim+=RATIONMANGER;
+    }
 
     public void deplacement() {
         this.x = this.x + pasX;
