@@ -131,14 +131,12 @@ class ListeCons extends Liste {
     }
 
     public boolean trouver(String value) {
-        boolean found = false;
-        if(value.equals(this.getPremier()) && found == false) {
-            found = true;
+        if (this.valeur == value){
+            return true;
         } else {
-            this.trouver(this.getPremier());
-            found = false;
+            this.trouver(value);
+            return false;
         }
-        return found;
     }
 
 }
