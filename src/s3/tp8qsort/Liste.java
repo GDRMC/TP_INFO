@@ -122,7 +122,11 @@ class ListeCons extends Liste {
 
     public ListeCons(int nbElements) {
         this.valeur = Alea(1, 100000);
-
+        if(nbElements>0){
+            this.suiv = new ListeCons(nbElements-1);
+        } else {
+            this.suiv = new ListeVide();
+        }
     }
 
     public boolean estVide() {
