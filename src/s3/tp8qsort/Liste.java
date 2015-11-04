@@ -179,8 +179,8 @@ class ListeCons extends Liste {
     }
 
     public Liste superieurs(int s) {
-        if (this.getPremier() > s) {
-            return new ListeCons(this.getPremier(), this.getReste().inferieurs(s));
+        if (this.getPremier() >= s) {
+            return new ListeCons(this.getPremier(), this.getReste().superieurs(s));
         } else {
             return this.getReste().superieurs(s);
         }
