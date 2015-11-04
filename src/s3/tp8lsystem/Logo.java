@@ -10,6 +10,7 @@ public class Logo {
 
 
    private static final double COEFDIMINUTION=0.7;
+   //changement de définition
    private static final int HauteurFenetre=600;
 
 
@@ -36,7 +37,7 @@ public class Logo {
     /*  variables de classe communes entre tous les objets-------------------------------*/
     protected static Stack <Logo> p = new Stack <Logo> ();        // memo des contextes partag�es entre objets
     protected static Fenetre f = new Fenetre("Lindenmayer", 900, 600); //fenetre commune aux objets Logo
-
+    //hauteur de fenètre changée à 600
 
 
     /**
