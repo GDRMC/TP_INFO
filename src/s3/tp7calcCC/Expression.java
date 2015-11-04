@@ -55,7 +55,7 @@ class OperationBinaire extends Expression {
             case '/':
                 result = a.getValeur()/b.getValeur();
                 break;
-            case '^':
+            case '^': // puissance
                 result = (int)Math.pow(a.getValeur(), b.getValeur());
                 break;
         }
@@ -89,10 +89,10 @@ class OperationUnaire extends Expression {
     public int getValeur() { 
         int result = 0;
         switch(o){
-            case '-':
+            case '-': //négatif de la valeur
                 result = Math.negateExact(this.a.getValeur());
                 break;
-            case '!':
+            case '!': //valeur absolue de la valeur
                 if(a.getValeur()<0){
                     result = Math.abs((int)a.getValeur());
                 } else {
@@ -111,7 +111,7 @@ class OperationUnaire extends Expression {
     public boolean estOperande() { return false; }
     public boolean estOperation() { return true; }
     public boolean estOperationUnaire() { return false; }
-    public boolean estOperationBinaire() { return true;}
+    public boolean estOperationBinaire() { return true; }
     
 }
 
@@ -130,7 +130,7 @@ class Operande extends Expression {
     public String postFix() { return String.valueOf(val); }
 
     public String toString() { return inFix(); }
-    public char getOperateur() { return 'o'; }
+    public char getOperateur() { return '$'; } //assimilé à une erreur
     public boolean estOperande() { return true; }
     public boolean estOperation() { return false; }
     public boolean estOperationUnaire() { return false; }

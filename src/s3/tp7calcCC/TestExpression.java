@@ -67,6 +67,11 @@ package s3.tp7calcCC;
             System.out.println("Valeur:   "+exp7.getValeur());
             System.out.println("\n");
             
+            Syntax builder = new Syntax();
+            Expression expN1 = builder.analyse("*5+4 3");
+                
+            
+            
         }
       
     }
