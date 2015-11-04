@@ -26,7 +26,7 @@ public class Fenetre extends JFrame implements ActionListener , MouseListener
         setDefaultCloseOperation(EXIT_ON_CLOSE);          
         mise_en_page( largeur, hauteur );   // on place les boutons et la zone de dessin ...
         
-        vacances = new Diapo();              // on charge la structure de données Diapo
+        vacances = new Diapo();              // on charge la structure de donnÃ©es Diapo
         vacances.ajouter("paysage1.jpg");
 		  vacances.ajouter("paysage2.jpg");
 		  vacances.ajouter("paysage3.jpg");
@@ -39,7 +39,7 @@ public class Fenetre extends JFrame implements ActionListener , MouseListener
         repaint();        
     }
     
-// la fenetre est constituée de trois parties Panel Nord : boutons ; Sud : boutons; Centre: zone de zoneDessin
+// la fenetre est constituee de trois parties Panel Nord : boutons ; Sud : boutons; Centre: zone de zoneDessin
     public void mise_en_page(int maxX, int maxY) 
     {
         //--------------------------------------------------------------------
@@ -70,21 +70,21 @@ public class Fenetre extends JFrame implements ActionListener , MouseListener
         setVisible(true);
     }
  
- // Affichage à l'ecran dans Paint() 
-    public void paint(Graphics g)   // dessin de la fenêtre générale
+ // Affichage ï¿½ l'ecran dans Paint() 
+    public void paint(Graphics g)   // dessin de la fenetre generale
     {
         this.p1.repaint();         // on redessine les boutons hauts
         this.p2.repaint();         // on redessine les boutons bas
                
         g= this.zoneDessin.getGraphics(); // on redessine dans le panel de dessin
             
-        // c'est ici qu'il faut mettre les elements à afficher à l'ecran
+        // c'est ici qu'il faut mettre les elements a afficher a l'ecran
         effacer();
         g.drawImage(im, 50, 10, zoneDessin);
    
     }
          
- // Procédure d'arrêt
+ // Procedure d'arret
     void quitter() {
         System.exit(0);
     }
@@ -103,7 +103,7 @@ public class Fenetre extends JFrame implements ActionListener , MouseListener
     } 
      
     
-// GESTION DES ACTIONS BOUTONS : cette methode est declenchée si Un bouton quelconque est appuyé
+// GESTION DES ACTIONS BOUTONS : cette methode est declenchee si Un bouton quelconque est appuye
     public void actionPerformed(ActionEvent e)           // on associe l'evenement souris sur bouton avec l'execution d'un sous prg
 	 {
       String c = e.getActionCommand();                   // on capte l'evenement : nom du bouton !
