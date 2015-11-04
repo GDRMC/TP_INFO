@@ -34,7 +34,7 @@ public abstract class Liste {
 
     public abstract Liste inserer(int s, int rang);
 
-    public abstract void listeEnTab(ArrayList T);
+    public abstract void listeEnTab(ArrayList t);
 
 }
 
@@ -103,7 +103,7 @@ class ListeVide extends Liste // permet d'avoir une etiquette concrete permettan
         return new ListeCons(s, new ListeVide());
     }
 
-    public void listeEnTab(ArrayList T) {
+    public void listeEnTab(ArrayList t) {
 
     }
 
@@ -122,7 +122,7 @@ class ListeCons extends Liste {
 
     public ListeCons(int nbElements) {
         this.valeur = Alea(1, 100000);
-        if(nbElements>0){
+        if(nbElements>1){
             this.suiv = new ListeCons(nbElements-1);
         } else {
             this.suiv = new ListeVide();
@@ -209,8 +209,9 @@ class ListeCons extends Liste {
         }
     }
 
-    public void listeEnTab(ArrayList T) {
-
+    public void listeEnTab(ArrayList t){
+        t.add(this.getPremier());
+        this.getReste().listeEnTab(t);
     }
 
     private int Alea(int min, int max) {
