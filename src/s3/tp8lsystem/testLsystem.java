@@ -10,7 +10,7 @@ public class testLsystem
    public static void main( String [] args )
    {
       LSystem l = new LSystem();
-      int nbDerivation = 4;
+      int nbDerivation = 5;
       for(int i=0;i<nbDerivation;i++){
           l.derivation();
       }

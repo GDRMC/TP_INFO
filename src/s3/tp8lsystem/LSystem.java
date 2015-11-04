@@ -14,7 +14,7 @@ public class LSystem {
         /* definition regle derivation */
         this.regles = new HashMap<Character, String>();
 
-        this.axiome = "X+Y";
+        this.axiome = "Y-X";
 
         this.regles.put('X', "X+Y++Y-X--XX-Y+");
         this.regles.put('Y', "-X+YY++Y+X--X-Y");
