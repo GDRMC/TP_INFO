@@ -201,7 +201,7 @@ public class Fenetre extends JFrame implements ActionListener {
                             new ArbreCons("Gramont", new ArbreCons("Bremaud"), new ArbreVide())
                     )
             );
-            repaint();
+            displayMessage(false,"Exemple généré");
         }
         //bouton recherche
         if (arg.equals("Rechercher")) {
@@ -210,12 +210,10 @@ public class Fenetre extends JFrame implements ActionListener {
             if (!Arb.estVide()) {
                 resultat = Arb.trouver(elementcherche);
                 if (resultat) {
-                    afRech.setBackground(Color.green);
                     trouve = true;
-                    afRech.setText("Element "+elementcherche+" trouvé");
+                    displayMessage(false,"Element "+elementcherche+" trouvé");
                 } else {
-                    afRech.setBackground(Color.red);
-                    afRech.setText("Element "+elementcherche+" introuvable");
+                    displayMessage(true,"Element "+elementcherche+" introuvable");
                 }
             }
         }
@@ -230,13 +228,18 @@ public class Fenetre extends JFrame implements ActionListener {
         }
         // bouton arbre de niveau 4
         if (arg.equals("Construire tableau")) {
-            Arb = new ArbreCons(5);
-            repaint();
+            Arb = new ArbreCons(3);
+            displayMessage(false,"Tableau vide construit");
         }
 
         // inserer feuille
         if (arg.equals("Insérer un joueur")) {
-
+            try{
+                this.Arb.insereFeuille(txt.getText());
+                displayMessage(false,"Personne insérée");
+            } catch (NullPointerException er){
+                displayMessage(true,"Erreur lors de l'insertion");
+            }
         }
 
         // saisir resultat match
@@ -265,5 +268,16 @@ public class Fenetre extends JFrame implements ActionListener {
              */
             repaint();
         }
+    }
+    
+    public void displayMessage(boolean error, String message){
+        if(error){
+            afRech.setBackground(Color.red);
+            afRech.setText(message);
+        } else {
+            afRech.setBackground(Color.green);
+            afRech.setText(message);
+        }
+        repaint();
     }
 }

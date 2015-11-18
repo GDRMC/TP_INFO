@@ -27,6 +27,8 @@ public abstract class Arbre {
     public abstract int nbNoeuds();
 
     public abstract int hauteur();
+    
+    public abstract boolean insereFeuille(String str);
 }
 
 class ArbreVide extends Arbre {
@@ -99,6 +101,10 @@ class ArbreVide extends Arbre {
 
     public int hauteur() {
         return 0;
+    }
+    
+    public boolean insereFeuille(String str){
+        return false;
     }
 }
 
@@ -227,5 +233,17 @@ class ArbreCons extends Arbre {
         nfg = 1 + getAg().hauteur();
         nfd = 1 + getAd().hauteur();
         return Math.max(nfg, nfd);
+    }
+    
+    public boolean insereFeuille(String str){
+        boolean test = false;
+        if(!this.estFeuille()){
+            return this.getAg().insereFeuille(str)||this.getAd().insereFeuille(str);
+        } else if(this.getRacine()==null&&!test){
+            this.setRacine(str);
+            return true;
+        } else {
+            return false;
+        }
     }
 }
