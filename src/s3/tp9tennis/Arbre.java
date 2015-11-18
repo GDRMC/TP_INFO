@@ -123,6 +123,18 @@ class ArbreCons extends Arbre {
         this.Ad = new ArbreVide();
     }
     
+    ArbreCons(int n){
+        if(n>0){
+            this.racine = null;
+            this.Ag = new ArbreCons(n-1);
+            this.Ad = new ArbreCons(n-1);
+        } else {
+            this.racine = null;
+            this.Ag = new ArbreVide();
+            this.Ad = new ArbreVide();
+        }
+    }
+    
     public String getRacine(){
         return this.racine;
     }

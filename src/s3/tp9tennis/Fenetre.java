@@ -230,7 +230,8 @@ public class Fenetre extends JFrame implements ActionListener {
         }
         // bouton arbre de niveau 4
         if (arg.equals("Construire tableau")) {
-
+            Arb = new ArbreCons(5);
+            repaint();
         }
 
         // inserer feuille
