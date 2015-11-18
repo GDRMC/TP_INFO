@@ -340,7 +340,9 @@ class ArbreCons extends Arbre {
     
     public void placerGagnant(String str){
         if(this.getAg().getRacine()!=null && this.getRacine()!=null){
-            
+            this.getAg().placerGagnant(str);
+        } else {
+            this.setRacine(str);
         }
     }
 }

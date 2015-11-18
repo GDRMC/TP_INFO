@@ -279,6 +279,7 @@ public class Fenetre extends JFrame implements ActionListener {
         // saisir resultat match
         if (arg.equals("Saisir résultat")) {
             Arb.placerGagnant(txt.getText());
+            repaint();
         }
         // cr�ation du tournoi et remplissage 
         if (arg.equals("Charger exemple")) {
