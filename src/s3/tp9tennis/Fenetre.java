@@ -6,6 +6,10 @@ import javax.swing.*;
 import javax.imageio.ImageIO;
 import java.io.*; // Pour pouvoir utiliser les fichiers
 
+/**
+ * Classe Fenetre
+ * @author GDRMC
+ */
 public class Fenetre extends JFrame implements ActionListener {
 
     // 3 panneaux constituant la fen�tre    
@@ -27,7 +31,14 @@ public class Fenetre extends JFrame implements ActionListener {
     //-------------------------------
 
 // CONSTRUCTEUR 
-    public Fenetre(String titre, int largeur, int hauteur) {
+
+    /**
+     *
+     * @param titre
+     * @param largeur
+     * @param hauteur
+     */
+        public Fenetre(String titre, int largeur, int hauteur) {
         super(titre);
         // placer ici l'initialisation de vos structures de données ------------------------------        
         //on initialise l'arbre à afficher
@@ -45,7 +56,13 @@ public class Fenetre extends JFrame implements ActionListener {
     }
 
 // ASSEMBLAGE PARTIES FENETRE : la fenetre est constitu�e de trois parties Panel Nord : boutons ; Sud : boutons; Centre: zone de zoneDessin
-    public void mise_en_page(int maxX, int maxY) {
+
+    /**
+     *
+     * @param maxX
+     * @param maxY
+     */
+        public void mise_en_page(int maxX, int maxY) {
         //--------------------------------------------------------------------
         // insertion boutons du haut
         this.p1 = new JPanel(new GridLayout());
@@ -110,6 +127,13 @@ public class Fenetre extends JFrame implements ActionListener {
 
     /**
      * ** M�thode de dessin rattach�es � la m�thode paint()**********************
+     * @param A
+     * @param x
+     * @param c2
+     * @param g
+     * @param y
+     * @param c1
+     * @param c3
      */
     public void dessineNoeud(Arbre A, int x, int y, Graphics g, Color c1, Color c2, Color c3) {
 
@@ -136,7 +160,17 @@ public class Fenetre extends JFrame implements ActionListener {
     }
 
     //pour dessiner un arbre on a besoin de la position du noeud à dessiner et du pas en x et y pour dessiner les fils
-    public void dessineArbre(Graphics g, Arbre A, int posX, int posY, int pasX, int pasY) {
+
+    /**
+     *
+     * @param g
+     * @param A
+     * @param posX
+     * @param posY
+     * @param pasX
+     * @param pasY
+     */
+        public void dessineArbre(Graphics g, Arbre A, int posX, int posY, int pasX, int pasY) {
 
         if (!A.estVide()) { //si l'arbre existe
             if (!A.getAg().estVide()) { //si il a un fils gauche
@@ -244,7 +278,7 @@ public class Fenetre extends JFrame implements ActionListener {
 
         // saisir resultat match
         if (arg.equals("Saisir résultat")) {
-
+            Arb.placerGagnant(txt.getText());
         }
         // cr�ation du tournoi et remplissage 
         if (arg.equals("Charger exemple")) {
@@ -270,6 +304,11 @@ public class Fenetre extends JFrame implements ActionListener {
         }
     }
     
+    /**
+     *  Affiche un message dans la fenètre dans la fenètre
+     * @param error mode erreur ou succès
+     * @param message message affiché
+     */
     public void displayMessage(boolean error, String message){
         if(error){
             afRech.setBackground(Color.red);

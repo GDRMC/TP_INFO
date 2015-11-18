@@ -1,34 +1,121 @@
 package s3.tp9tennis;
 
+/**
+ * Classe Arbre
+ * @author USER
+ */
 public abstract class Arbre {
+
+    /**
+     *
+     * @return
+     */
     public abstract String getRacine();
+
+    /**
+     *
+     * @return
+     */
     public abstract Arbre getAg();
+
+    /**
+     *
+     * @return
+     */
     public abstract Arbre getAd();
     
+    /**
+     *
+     * @param s
+     */
     public abstract void setRacine(String s);
+
+    /**
+     *
+     * @param Ag
+     */
     public abstract void setAg(Arbre Ag);
+
+    /**
+     *
+     * @param Ad
+     */
     public abstract void setAd(Arbre Ad);
     
+    /**
+     *
+     * @return
+     */
     public abstract boolean estVide();
     
+    /**
+     *
+     */
     public abstract void afficheGRD();
     
+    /**
+     *
+     * @return
+     */
     public abstract String lePlusAGauche();
+
+    /**
+     *
+     * @return
+     */
     public abstract String lePlusADroite();
     
+    /**
+     *
+     * @param valeur
+     * @return
+     */
     public abstract Arbre supprimer(String valeur);
     
+    /**
+     *
+     * @param element
+     * @return
+     */
     public abstract boolean trouver(String element);
     
+    /**
+     *
+     * @return
+     */
     public abstract boolean estFeuille();
     
+    /**
+     *
+     * @return
+     */
     public abstract int nbFeuille();
     
+    /**
+     *
+     * @return
+     */
     public abstract int nbNoeuds();
 
+    /**
+     *
+     * @return
+     */
     public abstract int hauteur();
     
+    /**
+     *
+     * @param str
+     * @return
+     */
     public abstract boolean insereFeuille(String str);
+    
+    /**
+     *
+     * @param str
+     * @return
+     */
+    public abstract void placerGagnant(String str);
 }
 
 class ArbreVide extends Arbre {
@@ -105,6 +192,10 @@ class ArbreVide extends Arbre {
     
     public boolean insereFeuille(String str){
         return false;
+    }
+    
+    public void placerGagnant(String str){
+        
     }
 }
 
@@ -244,6 +335,12 @@ class ArbreCons extends Arbre {
             return true;
         } else {
             return false;
+        }
+    }
+    
+    public void placerGagnant(String str){
+        if(this.getAg().getRacine()!=null && this.getRacine()!=null){
+            
         }
     }
 }
