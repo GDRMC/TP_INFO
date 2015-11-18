@@ -54,7 +54,7 @@ public class Fenetre extends JFrame implements ActionListener {
         p1.add(label);
         p1.add(txt);
         ajouteBouton("Construire tableau", p1);
-        ajouteBouton("Ins�rer un joueur", p1);
+        ajouteBouton("Insérer un joueur", p1);
         ajouteBouton("Charger exemple", p1);
         ajouteBouton("Saisir résultat", p1);
 
