@@ -1,4 +1,4 @@
-package s3.tp9tennis;
+package s3.td9tree;
 
 public abstract class Arbre {
     public abstract String getRacine();

@@ -161,7 +161,7 @@ public class Fenetre extends JFrame implements ActionListener {
     }
 
 // QUELQUES OUTILS
-    // Procédure d'arrêt
+    // Procdure d'arrêt
     void quitter() {
         System.exit(0);
     }
@@ -194,7 +194,14 @@ public class Fenetre extends JFrame implements ActionListener {
         }
 
         if (arg.equals("Exemple")) {
-
+            Arb = new ArbreCons("Durand",
+                    new ArbreCons("Dubois"),
+                    new ArbreCons("Fremond",
+                            new ArbreCons("Calobin"),
+                            new ArbreCons("Bremaud")
+                    )
+            );
+            repaint();
         }
         //bouton recherche
         if (arg.equals("Rechercher")) {
@@ -256,3 +263,5 @@ public class Fenetre extends JFrame implements ActionListener {
              */
             repaint();
         }
+    }
+}
