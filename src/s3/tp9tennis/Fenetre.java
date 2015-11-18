@@ -208,14 +208,14 @@ public class Fenetre extends JFrame implements ActionListener {
             boolean resultat = false;
             elementcherche = txt.getText();
             if (!Arb.estVide()) {
-                // resultat = ??
+                resultat = Arb.trouver(elementcherche);
                 if (resultat) {
                     afRech.setBackground(Color.green);
                     trouve = true;
-                    afRech.setText(" L'�l�ment a �t� trouv�");
+                    afRech.setText("Element "+elementcherche+" trouvé");
                 } else {
                     afRech.setBackground(Color.red);
-                    afRech.setText("non trouv� ...");
+                    afRech.setText("Element "+elementcherche+" introuvable");
                 }
             }
         }
