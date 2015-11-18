@@ -197,8 +197,8 @@ public class Fenetre extends JFrame implements ActionListener {
             Arb = new ArbreCons("Durand",
                     new ArbreCons("Dubois"),
                     new ArbreCons("Fremond",
-                            new ArbreCons("Calobin"),
-                            new ArbreCons("Bremaud")
+                            new ArbreCons("Calobin", new ArbreCons("Calamero"), new ArbreVide()),
+                            new ArbreCons("Gramont", new ArbreCons("Bremaud"), new ArbreVide())
                     )
             );
             repaint();
@@ -224,6 +224,7 @@ public class Fenetre extends JFrame implements ActionListener {
             if (txt.getText().compareTo("") != 0) {
                 if (!Arb.estVide()) {
                     Arb = Arb.supprimer(new String(txt.getText()));
+                    repaint();
                 }
             }
         }
