@@ -30,8 +30,13 @@ public class LireQT {
             case 'N':
                 return new Noir();
             case '(':
-
-                break;
+                ArbreQT lel = new AQTCons(QT(),QT(),QT(),QT());
+                c = s.charAt(index);
+                
+                if (c == ')'){
+                    index++;
+                    return lel;
+                }
             default:
                 System.out.println("Erreur Syntaxe caractère " + index + "  : " + s);
                 erreurDetect = true;
